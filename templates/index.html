@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <style>
+            body{
+                background-image: url('static/img/bg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                margin: 0 auto;
+            }
+        </style>    
+</head>
+    <body>
+        <div class="container p-5">
+            <div class="card border-success mb-3 p-3" style="max-width: 40rem;" >
+                <div class="card-body text-success">
+                    <h2>Sign Language Detection For Numbers By Hand Gestures</h2>
+                    <form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
+                        <input type="file" id="photo" name='image' required><br><br><br>
+                        <!-- <img id="image"/> -->
+                        <input class="btn btn-success" type="submit" value="Predict">
+                        
+                    </form>
+                    <br>
+                </div>
+                <!-- <a class="btn btn-success" href="/">Go Back</a> -->
+            </div>
+        </div>
+        <br>
+    </div>
+    </body>
+</script>
+</html>

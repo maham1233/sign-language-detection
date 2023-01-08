@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <style>
+            body{
+                background-image: url('static/img/bg.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container p-5">
+            <div class="card border-success mb-3 p-3" style="max-width: 40rem;" >
+                <div class="card-body text-success">
+                    <h2>Results Of Sign Language</h2>
+                    <div class="container center">
+                        {% if data[0][0] == 1: %}                             
+                            <h1 class="text-dark">Hand gesture Indicates Zero</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                            
+                        {% elif data[0][1] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates One</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                        {% elif data[0][2] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Two</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                            {% elif data[0][3] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Three</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                        {% elif data[0][4] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Four</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                            {% elif data[0][5] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Five</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                        {% elif data[0][6] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Six</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                            {% elif data[0][7] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Seven</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                        {% elif data[0][8] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Eight</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                            {% elif data[0][9] == 1 %}
+                            <h1 class="text-dark">Hand gesture Indicates Nine</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                        {% elif data[0][10] == 1 %}
+                            <h1 class="text-dark" >Undefined Image</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                        {% else: %}
+                                                      
+                            <h1 class="text-dark">image is not recognised</h1>
+                            <img height="400px" width="300px" src="{{url_for('load_img')}}" alt='img'> <br><br>
+                            
+                        {%endif%}
+                    </div>
+                    <a class="btn btn-success" href="/">Go Back</a>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
